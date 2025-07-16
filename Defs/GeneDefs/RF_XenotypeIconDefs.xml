@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--============================== Fixed Xenotype Icons ============================-->
+	
+	<!-- Kobold Xenotype -->
+	
+	<XenotypeIconDef>
+		<defName>RF_Kobold</defName>
+		<texPath>UI/XenotypeIcons/RF_Kobold</texPath>
+	</XenotypeIconDef>
+
+</Defs>

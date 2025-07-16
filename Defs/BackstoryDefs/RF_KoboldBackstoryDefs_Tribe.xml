@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--============================== Childhood Kobold ============================-->
+
+	<!--============================== Late-Bloomer ============================-->
+	<!-- Out of the shell last in their batch, had a difficult time connecting with their batch but was capable in the den. -->
+
+	<BackstoryDef>
+		<defName>RF_LateEgg</defName>
+		<title>Late Bloomer</title>
+		<titleShort>Late Spurt</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was the last egg in their batch to hatch. [PAWN_pronoun] was behind his peers and had trouble connecting socially, as such they devoted themselves for the den more.</baseDesc>
+		<spawnCategories>
+			<li>KoboldOnly</li>
+		</spawnCategories>
+		<skillGains>
+				<Social>-5</Social>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>2</Industriousness>
+		</forcedTraits>
+		<shuffleable>False</shuffleable>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RF_Prospector</defName>
+		<title>Prospector</title>
+		<titleShort>Prospect</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] was the one in charge of materials in their den. Whether it be foodstuffs to various materials, [PAWN_pronoun] did their best and managed groups of kobolds to have some form of order to the madness of kobold management.</baseDesc>
+		<spawnCategories>
+			<li>KoboldOnly</li>
+		</spawnCategories>
+		<skillGains>
+				<Social>3</Social>
+				<Intellectual>3</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>2</Industriousness>
+			<Abrasive>0</Abrasive>
+		</forcedTraits>
+		<shuffleable>False</shuffleable>
+	</BackstoryDef>
+    
+	
+</Defs>
