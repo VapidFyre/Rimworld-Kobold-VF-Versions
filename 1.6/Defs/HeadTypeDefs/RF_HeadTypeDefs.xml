@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--====================== Bases ======================-->
+  
+	<HeadTypeDef Name="KoboldAverageBase" ParentName="AverageBase" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<requiredGenes>
+			<li>RF_KoboldHead</li>
+		</requiredGenes>
+	</HeadTypeDef>
+
+	<HeadTypeDef Name="KoboldMechanitorAverageBase" ParentName="AverageBase" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<requiredGenes>
+			<li>RF_KoboldHead_Mechanitor</li>
+		</requiredGenes>
+	</HeadTypeDef>
+  
+	<!--====================== Heads ======================-->
+
+	<HeadTypeDef ParentName="KoboldAverageBase">
+		<defName>RF_KoboldHeadA</defName>
+		<graphicPath>Things/Pawn/Humanlike/Head/RF_KoboldHeadA/RF_KoboldHeadA</graphicPath>
+		<eyeOffsetEastWest>(0.11, 0, 0.19)</eyeOffsetEastWest>
+		<gender>None</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="KoboldMechanitorAverageBase">
+		<defName>RF_KoboldHeadB</defName>
+		<graphicPath>Things/Pawn/Humanlike/Head/RF_KoboldHeadB/RF_KoboldHeadB</graphicPath>
+		<eyeOffsetEastWest>(0.11, 0, 0.19)</eyeOffsetEastWest>
+		<gender>None</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="KoboldAverageBase">
+		<defName>RF_KoboldHeadC</defName>
+		<graphicPath>Things/Pawn/Humanlike/Head/RF_KoboldHeadC/RF_KoboldHeadC</graphicPath>
+		<eyeOffsetEastWest>(0.11, 0, 0.19)</eyeOffsetEastWest>
+		<gender>None</gender>
+	</HeadTypeDef>
+</Defs>

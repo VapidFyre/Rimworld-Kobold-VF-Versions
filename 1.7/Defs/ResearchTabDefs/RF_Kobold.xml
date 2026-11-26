@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>RF_KoboldResearch</defName>
+    <label>Kobold Tech</label>
+    <description>Research kobold and adjacent technology... use it wisely.</description>
+  </ResearchTabDef>
+</Defs>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace">
+        <defName>RF_Kobold_Tribal</defName>
+        <label>Kobold</label>
+        <description>Testing for Big and Small!</description>
+        <statBases>
+          <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">0.7</SM_BodySizeMultiplier>
+        </statBases>
+    </ThingDef>
+
+<ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace">
+        <defName>RF_Kobold</defName>
+        <label>Kobold</label>
+        <description>Testing for Big and Small!</description>
+        <statBases>
+          <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">0.5</SM_BodySizeMultiplier>
+        </statBases>
+    </ThingDef>
+
+<ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace">
+        <defName>RF_Kobold_Rare</defName>
+        <label>rare Kobold</label>
+        <description>A rare, psychic-sensitive Kobold physiology.</description>
+        <statBases>
+          <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">0.5</SM_BodySizeMultiplier>
+        </statBases>
+    </ThingDef>
+
+<ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace">
+        <defName>RF_Kobold_Mechanitor</defName>
+        <label>Kobold</label>
+        <description>Testing for Big and Small!</description>
+        <statBases>
+          <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">0.4</SM_BodySizeMultiplier>
+        </statBases>
+    </ThingDef>
+
+</Defs>

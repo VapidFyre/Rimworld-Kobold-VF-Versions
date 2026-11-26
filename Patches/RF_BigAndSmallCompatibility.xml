@@ -1,0 +1,30 @@
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Big and Small - Framework</li>
+    </mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/GeneDef[defName="RF_Kobold_Physiology_Rare"]</xpath>
+      <value>
+        <li Class="BigAndSmall.PawnExtension">
+          <thingDefSwap>RF_Kobold_Rare</thingDefSwap>
+          <forceThingDefSwap>false</forceThingDefSwap>
+        </li>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Big and Small - Framework</li>
+    </mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/GeneDef[defName="RF_Kobold_Physiology"]</xpath>
+      <value>
+        <li Class="BigAndSmall.PawnExtension">
+          <thingDefSwap>RF_Kobold</thingDefSwap>
+          <forceThingDefSwap>false</forceThingDefSwap>
+        </li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

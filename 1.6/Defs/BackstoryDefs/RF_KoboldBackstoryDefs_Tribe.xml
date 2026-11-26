@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--============================== Childhood Kobold ============================-->
+
+	<BackstoryDef>
+		<defName>RF_LateEgg</defName>
+		<title>Late Bloomer</title>
+		<titleShort>Late Spurt</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was the last egg in their batch to hatch. [PAWN_pronoun] was behind his peers and had trouble connecting socially, as such they devoted themselves for the den more. Working quietly in the background in earnest...</baseDesc>
+		<spawnCategories>
+			<li>KoboldTribe</li>
+		</spawnCategories>
+		<skillGains>
+				<Social>-5</Social>
+				<Crafting>3</Crafting>
+				<Construction>3</Construction>
+				<Intellectual>2</Intellectual>
+				<Artistic>2</Artistic>
+				<Plants>3</Plants>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>2</Industriousness>
+			<Nerves>-1</Nerves>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RF_RedDragonTouched</defName> <!-- hee hee hee haw haw fighter -->
+		<title>Dragon Blessed: Red</title>
+		<titleShort>red dragon blessed</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] at birth had a mark of a Red Dragon, one with bloodlust but great aptitude in combat. Whether it came from a line of kobolds under a Dragon or chance- many things are possible. No matter the cause however, it is undeniable that [PAWN_pronoun] excelled in all manners of ranged or melee as they grew up and was proficient in whatever weapon they picked up on. They also developed to be big eaters from all their fighting...</baseDesc>
+		<spawnCategories>
+			<li>KoboldTribe</li>
+			<li>KoboldFluid</li>
+		</spawnCategories>
+		<skillGains>
+				<Melee>5</Melee>
+				<Shooting>5</Shooting>
+				<Social>-2</Social>
+				<Medicine>2</Medicine>
+				<Animals>2</Animals>
+				<Cooking>-2</Cooking>
+				<Plants>-2</Plants>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Gourmand>0</Gourmand>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RF_BlueDragonTouched</defName> <!-- long run trait -->
+		<title>Dragon Blessed: Blue</title>
+		<titleShort>blue dragon blessed</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] at birth had a mark of a Blue Dragon, one of cerulean winters. Whether it came from a line of kobolds under a Dragon or chance- many things are possible. No matter the cause however, it is undeniable that [PAWN_pronoun] tended to be serene and cool, though this came at a draw of being too relaxed in most things, they rarely panicked if at all when it came to most day to day activities.</baseDesc>
+		<spawnCategories>
+			<li>KoboldTribe</li>
+			<li>KoboldFluid</li>
+		</spawnCategories>
+		<skillGains>
+				<Melee>-5</Melee>
+				<Shooting>-5</Shooting>
+				<Cooking>-3</Cooking>
+				<Plants>-1</Plants>
+				<Animals>-1</Animals>
+				<Mining>-3</Mining>
+				<Construction>-3</Construction>
+				<Crafting>-3</Crafting>
+				<Social>2</Social> <!-- just a chill guy!! -->
+				<Intellectual>-1</Intellectual>
+				<Medicine>1</Medicine> <!-- steady hands help lmao -->
+		</skillGains>
+		<forcedTraits>
+			<Nerves>1</Nerves> <!-- Nerves: Steadfast -->
+			<NaturalMood>1</NaturalMood> <!-- Optimist, also check TraitDefs in Core lmao -->
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RF_GreenDragonTouched</defName> <!-- long run trait-->
+		<title>Dragon Blessed: Green</title>
+		<titleShort>green dragon blessed</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] at birth had a mark of a Green Dragon, one of lush forests. Whether it came from a line of kobolds under a Dragon or chance- many things are possible. No matter the cause however, it is undeniable that [PAWN_pronoun] had a knack for nature, maybe a bit too much fixated on it... but they're really good at it.</baseDesc>
+		<spawnCategories>
+			<li>KoboldTribe</li>
+			<li>KoboldFluid</li>
+		</spawnCategories>
+		<skillGains>
+				<Cooking>2</Cooking>
+				<Plants>5</Plants>
+				<Animals>5</Animals>
+				<Mining>-2</Mining>
+				<Construction>-2</Construction>
+				<Crafting>-2</Crafting>
+				<Social>-2</Social> 
+				<Medicine>2</Medicine> <!-- steady hands help lmao -->
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>1</Industriousness>
+			<Nudist>0</Nudist>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RF_Scale_Deficient</defName> <!-- long run trait-->
+		<title>Scale Deficient</title>
+		<titleShort>scale deficient</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] had an abnormality that made them shed their scales too early, leading to multiple complications throughout their childhood, however this did not deter but motivate them to keep living and find solutions for kin with similar conditions. No matter the cause however, it is undeniable that [PAWN_pronoun] had a knack for crafting and researching, albeit a bit sickly. So take care of them :3c</baseDesc>
+		<spawnCategories>
+			<li>KoboldTribe</li>
+			<li>KoboldFluid</li>
+		</spawnCategories>
+		<skillGains>
+				<Cooking>2</Cooking>
+				<Melee>-5</Melee>
+				<Shooting>2</Shooting>
+				<Mining>-5</Mining>
+				<Crafting>7</Crafting>
+				<Intellectual>7</Intellectual>
+				<Social>-2</Social> 
+				<Medicine>2</Medicine> <!-- steady hands help lmao -->
+		</skillGains>
+		<forcedTraits>
+			<Kind>0</Kind>
+			<Immunity>-1</Immunity>
+			<FastLearner>0</FastLearner>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<!--============================== Adulthood Kobold ============================-->
+
+	<BackstoryDef>
+		<defName>RF_Prospector</defName>
+		<title>Prospector</title>
+		<titleShort>Prospect</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] was the one in charge of materials in their den. Whether it be foodstuffs to various materials, [PAWN_pronoun] did their best and managed groups of kobolds to have some form of order to the madness of kobold management.</baseDesc>
+		<spawnCategories>
+			<li>KoboldFluid</li>
+		</spawnCategories>
+		<skillGains>
+				<Social>3</Social>
+				<Intellectual>3</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>2</Industriousness>
+			<Abrasive>0</Abrasive>
+		</forcedTraits>
+	</BackstoryDef>
+    
+</Defs>

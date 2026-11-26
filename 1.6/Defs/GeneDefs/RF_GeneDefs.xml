@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+
+    <GeneDef ParentName="GeneEarsBase" Name="KoboldEarsBase" Abstract="True">
+    <randomChosen>true</randomChosen>
+    </GeneDef>
+
+<GeneDef ParentName="KoboldEarsBase">
+    <defName>RF_KoboldEars</defName> 
+    <label>kobold ears</label>
+    <description>Carriers of this gene possess kobold-like ears.</description>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <iconPath>UI/GeneIcons/RF_AEars</iconPath>
+    <renderNodeProperties>
+        <li>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+            <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPaths>
+                <li>Things/Pawn/Humanlike/Ears/RF_KoboldEarsA/RF_KoboldEarsA</li>
+                <li>Things/Pawn/Humanlike/Ears/RF_KoboldEarsA/RF_KoboldEarsA_Attentive</li>
+            </texPaths>
+            <useSkinShader>True</useSkinShader>
+            <colorType>Skin</colorType>
+            <parentTagDef>Head</parentTagDef>
+            <drawData>
+                <defaultData>
+                    <layer>60</layer>
+                </defaultData>
+                <dataNorth>
+                    <offset>(0.0, -0.1, 0.0)</offset>
+                </dataNorth>
+                <dataSouth>
+                    <offset>(0.0, -0.1, 0.0)</offset>
+                </dataSouth>
+                <dataEast>
+                    <offset>(-0.05, 0.0, 0.0)</offset>
+                </dataEast>
+            </drawData>
+        </li>
+    </renderNodeProperties>
+</GeneDef>
+
+<GeneDef ParentName="KoboldEarsBase">
+    <defName>RF_KoboldEars_Thick</defName>
+    <label>kobold ears thick</label>
+    <description>Carriers of this gene posses thicker, kobold-like ears.</description>
+    <iconPath>UI/GeneIcons/RF_CEars</iconPath>
+    <renderNodeProperties>
+        <li>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+            <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPaths>
+                <li>Things/Pawn/Humanlike/Ears/RF_KoboldEars_Thick/RF_KoboldEars_Thick</li>
+            </texPaths>
+            <useSkinShader>True</useSkinShader>
+            <colorType>Skin</colorType>
+            <parentTagDef>Head</parentTagDef>
+            <drawData>
+                <defaultData>
+                    <layer>60</layer>
+                </defaultData>
+                <dataNorth>
+                    <offset>(0.0, -0.1, 0.0)</offset>
+                </dataNorth>
+                <dataSouth>
+                    <offset>(0.0, -0.1, 0.0)</offset>
+                </dataSouth>
+                <dataEast>
+                    <offset>(-0.05, 0.0, 0.0)</offset>
+                </dataEast>
+            </drawData>
+        </li>
+    </renderNodeProperties>
+</GeneDef>
+
+
+<GeneDef ParentName="KoboldEarsBase">
+    <defName>RF_KoboldEars_False</defName>
+    <label>kobold ears false</label>
+    <description>Carriers of this gene possesses their ears within.</description>
+    <iconPath>UI/GeneIcons/RF_NoEars</iconPath>
+    <renderNodeProperties>
+        <li>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+            <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPath>Things/Pawn/Humanlike/Ears/RF_KoboldEarsB/RF_KoboldEarsB</texPath>
+            <parentTagDef>Head</parentTagDef>  
+        </li>
+    </renderNodeProperties>
+</GeneDef>
+
+
+<GeneDef ParentName="GeneJawBase">
+    <defName>RF_KoboldHead</defName>
+    <label>kobold head</label>
+    <labelShortAdj>kobold-like</labelShortAdj>
+    <description>Carriers of this gene possess a kobold head.</description>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>98</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <iconPath>UI/GeneIcons/RF_AHead</iconPath>
+    <forcedHeadTypes>
+        <li>RF_KoboldHeadA</li>
+        <li>RF_KoboldHeadC</li>
+    </forcedHeadTypes>
+</GeneDef>
+
+<GeneDef ParentName="GeneJawBase">
+    <defName>RF_KoboldHead_Mechanitor</defName>
+    <label>kobold mechanitor head</label>
+    <labelShortAdj>kobold-like but mechanitor</labelShortAdj>
+    <description>Carriers of this gene possess a kobold mechanitor head. No tooth for biting.</description>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>98</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <iconPath>UI/GeneIcons/RF_KoboldHeadB</iconPath>
+    <forcedHeadTypes>
+        <li>RF_KoboldHeadB</li>
+    </forcedHeadTypes>
+</GeneDef>
+
+<GeneDef ParentName="GeneTailBase" Name="KoboldTailBase" Abstract="True">
+    <description>Gene to kobold tail</description>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>30</displayOrderInCategory>
+    <statOffsets>
+        <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+</GeneDef>
+
+
+<GeneDef ParentName="KoboldTailBase">
+    <defName>RF_ATail</defName>
+    <label>standard long tail</label>
+    <iconPath>UI/GeneIcons/RF_ATail</iconPath>
+    <renderNodeProperties>
+        <li>
+            <texPath>Things/Pawn/Humanlike/Tail/RF_KoboldTail_Standard_Long/RF_KoboldTail_Standard_Long</texPath>
+            <shaderTypeDef>CutoutComplex</shaderTypeDef>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <useSkinShader>True</useSkinShader>
+            <overrideMeshSize>(1.0,1.0)</overrideMeshSize>
+            <colorType>Skin</colorType>
+            <parentTagDef>Body</parentTagDef>
+            <drawData>
+                <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                <defaultData><layer>-2</layer></defaultData>
+                <dataNorth>
+                    <offset>(0,0,-0.5)</offset>
+                    <layer>90</layer>
+                </dataNorth>
+                <dataSouth>
+                    <offset>(-0.11,-0,-0.2)</offset>
+                </dataSouth>
+                <dataEast>
+                    <offset>(-0.54,0,-0.25)</offset>
+                </dataEast>
+                <dataWest>
+                    <offset>(0.54,0,-0.25)</offset>
+                </dataWest>
+            </drawData>
+        </li>
+    </renderNodeProperties>
+</GeneDef>
+
+
+<GeneDef ParentName="GeneHeadboneBase" Name="KoboldHornsBase" Abstract="True">
+    <description>Kobold Gene for horns!</description>
+    <randomChosen>true</randomChosen>
+</GeneDef>
+
+<GeneDef ParentName="KoboldHornsBase">
+    <defName>RF_KoboldHorns_Stubby</defName>
+    <label>stubby horns</label>
+    <description>Kobold Gene for horns, stubby short ones! Looks kinda cute, not as comfortable to sleep around but not the worst thing.</description>
+    <iconPath>UI/GeneIcons/RF_KoboldHorns_Stubby</iconPath>
+    <renderNodeProperties>
+        <li>
+            <useSkinShader>true</useSkinShader>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPath>Things/Pawn/Humanlike/Horns/RF_KoboldHorns_Short</texPath>
+            <color>(255,255,255)</color>
+			<parentTagDef>Head</parentTagDef>
+			<colorType>Custom</colorType>
+            <drawData> <!-- God cursed my horns to be overlapping on the front-->
+                <defaultData><layer>10</layer></defaultData>
+                <dataNorth><layer>80</layer></dataNorth>
+            </drawData>
+        </li>
+    </renderNodeProperties>
+    <statOffsets>
+        <PawnBeauty>0.5</PawnBeauty>
+        <RestRateMultiplier>-0.05</RestRateMultiplier>
+    </statOffsets>
+
+</GeneDef>
+
+<GeneDef ParentName="KoboldHornsBase">
+    <defName>RF_KoboldHorns_Long</defName>
+    <label>long horns</label>
+    <description>Kobold Gene for horns, long standard ones! Looks cool, pretty not as comfortable to sleep around but helps with cooling down in the heat!</description>
+    <iconPath>UI/GeneIcons/RF_KoboldHorns_Long</iconPath>
+    <renderNodeProperties>
+        <li>
+            <useSkinShader>true</useSkinShader>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPath>Things/Pawn/Humanlike/Horns/RF_KoboldHorns_Long</texPath>
+            <color>(255,255,255)</color>
+			<parentTagDef>Head</parentTagDef>
+			<colorType>Custom</colorType>
+            <drawData> 
+                <defaultData><layer>10</layer></defaultData>
+                <dataNorth><layer>80</layer></dataNorth>
+            </drawData>
+        </li>
+    </renderNodeProperties>
+    <statOffsets>
+        <PawnBeauty>0.25</PawnBeauty>
+        <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+        <RestRateMultiplier>-0.05</RestRateMultiplier>
+    </statOffsets>
+</GeneDef>
+
+<GeneDef ParentName="KoboldHornsBase">
+    <defName>RF_KoboldHorns_LongCurl</defName>
+    <label>long curly horns</label>
+    <description>Kobold Gene for horns, long curly ones! Looks real cool!! Like mine ;3c but not comfortable at all to sleep around but helps with cooling down in the heat and carry a bit more by hanging them by the horns.</description>
+    <iconPath>UI/GeneIcons/RF_KoboldHorns_LongCurl</iconPath>
+    <renderNodeProperties>
+        <li>
+            <useSkinShader>true</useSkinShader>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPath>Things/Pawn/Humanlike/Horns/RF_KoboldHorns_LongCurl</texPath>
+            <color>(255,255,255)</color>
+			<parentTagDef>Head</parentTagDef>
+			<colorType>Custom</colorType>
+            <drawData> 
+                <defaultData><layer>60</layer></defaultData>
+                <dataNorth><layer>80</layer></dataNorth>
+            </drawData>
+        </li>
+    </renderNodeProperties>
+    <statOffsets>
+        <PawnBeauty>0.35</PawnBeauty>
+        <CarryingCapacity>10</CarryingCapacity>
+        <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+        <RestRateMultiplier>-0.125</RestRateMultiplier>
+    </statOffsets>
+</GeneDef>
+
+<GeneDef Name="GenePhysiologyBase" Abstract="True">
+    <displayCategory>Miscellaneous</displayCategory>
+    <exclusionTags>
+        <li>Physiology</li>
+    </exclusionTags>
+    <randomChosen>true</randomChosen>
+</GeneDef>
+
+<GeneDef ParentName="GenePhysiologyBase">
+    <defName>RF_Kobold_Physiology</defName>
+    <label>kobold physiology</label>
+    <description>Carriers of this gene is a kobold officially, they got some zoomies!!!</description>
+    <biostatCpx>1</biostatCpx> <!-- capacity?-->
+    <biostatArc>1</biostatArc>
+    <biostatMet>0</biostatMet> <!-- Metabolism?-->
+    <iconPath>UI/GeneIcons/RF_KoboldPhysiology</iconPath>
+    <displayCategory>Archite</displayCategory> <!-- we dont want this to be extractable lmao but still possible, findout how to make pawn small look-->
+    <statOffsets>
+        <MoveSpeed>0.9</MoveSpeed>
+        <MeleeDodgeChance>5</MeleeDodgeChance>
+        <CarryingCapacity>-25</CarryingCapacity>
+        <MeatAmount>-20</MeatAmount>
+        <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+        <RoyalFavorValue>-2</RoyalFavorValue>
+    </statOffsets>
+</GeneDef>
+
+<GeneDef ParentName="GenePhysiologyBase">
+    <defName>RF_Kobold_Physiology_Rare</defName>
+    <label>kobold physiology</label>
+    <description>Carriers of this gene is a kobold officially, this one can hear something in the walls... (it's more kobolds (trying to give them psylink level at start but cant find it)) </description>
+    <biostatCpx>1</biostatCpx> <!-- capacity?-->
+    <biostatArc>1</biostatArc>
+    <biostatMet>0</biostatMet> <!-- Metabolism?-->
+    <iconPath>UI/GeneIcons/RF_KoboldPhysiology_Rare</iconPath>
+    <displayCategory>Archite</displayCategory> <!-- we dont want this to be extractable lmao but still possible, findout how to make pawn small look-->
+    <statOffsets>
+        <MoveSpeed>0.9</MoveSpeed>
+        <CarryingCapacity>-25</CarryingCapacity>
+        <MeatAmount>-20</MeatAmount>
+        <ArmorRating_Blunt>-0.2</ArmorRating_Blunt>
+        <PsychicSensitivity>0.3</PsychicSensitivity>
+        <MeditationFocusGain>0.15</MeditationFocusGain>
+        <PsychicEntropyRecoveryRate>0.15</PsychicEntropyRecoveryRate>
+        <RoyalFavorValue>4</RoyalFavorValue>
+    </statOffsets>
+</GeneDef>
+
+<GeneDef ParentName="GenePhysiologyBase">
+    <defName>RF_Kobold_Physiology_Mechanitor</defName>
+    <label>kobold mechanitor physiology</label>
+    <description>Carriers of this gene possess kobold physiology adapted for mechanitor life, their flesh weakened.</description>
+    <biostatCpx>1</biostatCpx> <!-- capacity?-->
+    <biostatArc>1</biostatArc>
+    <biostatMet>0</biostatMet> <!-- Metabolism?-->
+    <iconPath>UI/GeneIcons/RF_KoboldPhysiology_Mechanitor</iconPath>
+    <displayCategory>Archite</displayCategory> <!-- we dont want this to be extractable lmao but still possible, findout how to make pawn small look-->
+    <statOffsets>
+        <MoveSpeed>0.45</MoveSpeed>
+        <CarryingCapacity>-35</CarryingCapacity>
+        <MeatAmount>-40</MeatAmount>
+        <ArmorRating_Blunt>-0.2</ArmorRating_Blunt>
+        <MechBandwidth>6</MechBandwidth>
+        <MechControlGroups>1</MechControlGroups>
+        <RoyalFavorValue>3</RoyalFavorValue>
+    </statOffsets>
+</GeneDef>
+
+</Defs>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>RF_VisorImplant_OB</defName>
+    <label>Deteriorated SaND Omni-Band Visor</label>
+    <labelNoun>an ancient deteriorated prosthetic visor</labelNoun>
+    <description>An ancient deteriorated visor surgically implanted over the eyes, to presumably, interface with machines. It is capable of managing machines more flexibly. Mechanitor Kobolds gain bonuses from it. From another world, from another time, it's not supposed to be here.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RF_VisorImplant_OB</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RF_VisorImplant_OB</spawnThingOnRemoved>
+    <comps>
+      <li Class="Rapidfyre.RF.HediffCompProperties_VisorMechanitorBonus" />
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobalOffsetMech>0.05</WorkSpeedGlobalOffsetMech>
+          <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Hediff</workerClass>
+        <texPath>Things/Pawn/Humanlike/Apparel/Visor/RF_Kobold_NDOmniBandVisor</texPath>
+        <drawSize>0.5</drawSize>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>61</layer>
+          </defaultData>
+          <dataEast>
+            <offset>(0.1, 0, 0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>RF_VisorImplant_OB</defName>
+    <label>Deteriorated SaND Omni-Band Visor</label>
+    <description>An ancient deteriorated visor surgically implanted over the eyes, to presumably, interface with machines. It is capable of managing machines more flexibly. Mechanitor Kobolds gain bonuses from it. From another world, another time, it's not supposed to be here.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>InstallRF_VisorImplant_OB</RecipeDef>
+      <RecipeDef>MakeRF_VisorImplant_OB</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Visor/RF_Kobold_NDOmniBandVisor_item</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>MakeRF_VisorImplant_OB</defName>
+    <label>make Deteriorated SaND Omni-Band Visor</label>
+    <description>Craft a SaND Omni-Band Visor at a machining table.</description>
+    <jobString>Making a SaND Omni-Band Visor.</jobString>
+    <workAmount>4000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <researchPrerequisite>RF_KoboldVisorResearch</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RF_VisorImplant_OB>1</RF_VisorImplant_OB>
+    </products>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallRF_VisorImplant_OB</defName>
+    <label>install Deteriorated Sand Omni-Band Visor</label>
+    <description>Install the Deteriorated SaND Omni-Band Visor over their eyes.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RF_VisorImplant_OB</ThingDef>
+      <HediffDef>RF_VisorImplant_OB</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing the SaND O-B Visor.</jobString>
+    <researchPrerequisite>RF_KoboldVisorResearch</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RF_VisorImplant_OB</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RF_VisorImplant_OB</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Head</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RF_VisorImplant_OB</addsHediff>
+  </RecipeDef>
+
+  <!-- rawr x3 im hungry go support me on patreon and get me some food!! vapidfyre.godbold.loan -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>RF_VisorImplant_DB</defName>
+    <label>Deteriorated SaND Directional-Band Visor</label>
+    <labelNoun>an ancient deteriorated prosthetic visor</labelNoun>
+    <description>An ancient deteriorated visor surgically implanted over the eyes, to presumably, interface with machines. It is capable of increasing raw bandwidth. Mechanitor Kobolds gain bonuses from it. From another world, from another time, it's not supposed to be here.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RF_VisorImplant_DB</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RF_VisorImplant_DB</spawnThingOnRemoved>
+    <comps>
+      <li Class="Rapidfyre.RF.HediffCompProperties_VisorMechanitorBonus" />
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobalOffsetMech>0.05</WorkSpeedGlobalOffsetMech>
+          <MechBandwidth>2</MechBandwidth>
+        </statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Hediff</workerClass>
+        <texPath>Things/Pawn/Humanlike/Apparel/Visor/RF_Kobold_NDDirectionalBandVisor</texPath>
+        <drawSize>0.5</drawSize>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>61</layer>
+          </defaultData>
+          <dataEast>
+            <offset>(0.1, 0, 0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>RF_VisorImplant_DB</defName>
+    <label>Deteriorated SaND Directional-Band Visor</label>
+    <description>An ancient deteriorated visor surgically implanted over the eyes, to presumably, interface with machines. It is capable of increasing raw bandwidth. Mechanitor Kobolds gain bonuses from it. From another world, from another time, it's not supposed to be here.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>InstallRF_VisorImplant_DB</RecipeDef>
+      <RecipeDef>MakeRF_VisorImplant_DB</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Visor/RF_Kobold_NDDirectionalBandVisor_item</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>MakeRF_VisorImplant_DB</defName>
+    <label>make Deteriorated SaND Directional-Band Visor</label>
+    <description>Craft a SaND Directional-Band Visor at a machining table.</description>
+    <jobString>Making a SaND Directional-Band Visor.</jobString>
+    <workAmount>4000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <researchPrerequisite>RF_KoboldVisorResearch</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RF_VisorImplant_DB>1</RF_VisorImplant_DB>
+    </products>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallRF_VisorImplant_DB</defName>
+    <label>Install Deteriorated SaND Directional-Band Visor</label>
+    <description>Install the SaND Deteriorated Directional-Band Visor over their eyes.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RF_VisorImplant_DB</ThingDef>
+      <HediffDef>RF_VisorImplant_DB</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing the SaND D-B Visor.</jobString>
+    <researchPrerequisite>RF_KoboldVisorResearch</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RF_VisorImplant_DB</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RF_VisorImplant_DB</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Head</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RF_VisorImplant_DB</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveRF_VisorImplant_OB</defName>
+    <label>remove Deteriorated SaND Omni-Band Visor</label>
+    <description>Remove the Deteriorated SaND Omni-Band Visor.</description>
+    <jobString>Removing the SaND O-B Visor.</jobString>
+    <researchPrerequisite>RF_KoboldVisorResearch</researchPrerequisite>
+    <appliedOnFixedBodyParts>
+      <li>Head</li>
+    </appliedOnFixedBodyParts>
+    <removesHediff>RF_VisorImplant_OB</removesHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveRF_VisorImplant_DB</defName>
+    <label>remove Deteriorated SaND Directional-Band Visor</label>
+    <description>Remove the Deteriorated SaND Directional-Band Visor.</description>
+    <jobString>Removing the SaND D-B Visor.</jobString>
+    <researchPrerequisite>RF_KoboldVisorResearch</researchPrerequisite>
+    <appliedOnFixedBodyParts>
+      <li>Head</li>
+    </appliedOnFixedBodyParts>
+    <removesHediff>RF_VisorImplant_DB</removesHediff>
+  </RecipeDef>
+</Defs>

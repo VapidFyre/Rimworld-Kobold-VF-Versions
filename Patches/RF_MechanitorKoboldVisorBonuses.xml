@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="MechBandwidth"]</xpath>
+    <value>
+      <parts>
+        <li Class="Rapidfyre.RF.StatPart_VisorMechanitorBonus">
+          <statOffset>2</statOffset>
+          <explanation>Mechanitor Kobold visor bonus: +2</explanation>
+        </li>
+      </parts>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="HackingSpeed"]</xpath>
+    <value>
+      <parts>
+        <li Class="Rapidfyre.RF.StatPart_VisorMechanitorBonus">
+          <statOffset>0.1</statOffset>
+          <explanation>Mechanitor Kobold visor bonus: +10%</explanation>
+        </li>
+      </parts>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="MechRepairSpeed"]</xpath>
+    <value>
+      <parts>
+        <li Class="Rapidfyre.RF.StatPart_VisorMechanitorBonus">
+          <statOffset>0.06</statOffset>
+          <explanation>Mechanitor Kobold visor bonus: +6%</explanation>
+        </li>
+      </parts>
+    </value>
+  </Operation>
+</Patch>
