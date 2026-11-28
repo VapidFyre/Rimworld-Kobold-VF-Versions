@@ -1,0 +1,5 @@
+yipyip commit is v0.22 should be
+
+change the folder from Rimworld-Kobold-VF-Versions to Rimworld-Kobold-VF maybe... that's what it's usually named but it shouldnt cause any issues
+
+releases are at the side download the version you want, extract it in the mods folder and you should be good
